@@ -3,7 +3,9 @@
  * @description Initializes Prisma Client for DB operations
  */
 
-import { PrismaClient } from "@prisma/client";
+import pkg from "@prisma/client";
+
+const { PrismaClient } = pkg;
 
 /**
  * Singleton Prisma Client instance
