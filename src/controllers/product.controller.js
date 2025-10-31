@@ -3,8 +3,8 @@
  * @description Handles Product CRUD operations
  */
 
-import asyncHandler from "../middlewares/async-handler";
-import prisma from "../prisma/client";
+import asyncHandler from "../middlewares/async-handler.js";
+import prisma from "../prisma/client.js";
 
 /**
  * @desc Fetch all products
