@@ -3,10 +3,11 @@
 A **production-ready REST API** built with **Express.js** and **Prisma ORM** (MongoDB) to manage **Products, Categories, and Brands**.  
 Supports **CRUD operations** with proper **modular structure**, **async error handling**, and **JSDoc documentation**.
 
----
+
 
 ## Project Structure
 
+```text
 project-root/
 ├─ src/
 │ ├─ prisma/
@@ -27,9 +28,7 @@ project-root/
 │ └─ schema.prisma
 ├─ .env
 └─ package.json
-
-
----
+```
 
 ## Features
 
@@ -41,7 +40,6 @@ project-root/
 - Fully documented with JSDoc
 - CRUD operations for **Products, Categories, and Brands**
 
----
 
 ## Prerequisites
 
@@ -49,8 +47,6 @@ project-root/
 - pnpm / npm / yarn
 - MongoDB Atlas or local MongoDB instance
 - dotenv
-
----
 
 ## Setup & Installation
 
