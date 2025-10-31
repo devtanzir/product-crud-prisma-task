@@ -35,6 +35,21 @@ app.post("/products", async (req, res) => {
   });
   res.status(201).json(data);
 });
+app.delete("/products/:id", async (req, res) => {
+  const { id } = req.params;
+  await prisma.product.delete({
+    where: { id },
+  });
+  res.status(200).json({ message: "product deleted" });
+});
+app.patch("/products/:id", async (req, res) => {
+  const { id } = req.params;
+  const data = await prisma.product.update({
+    where: { id },
+    data: req.body,
+  });
+  res.status(200).json(data);
+});
 
 //! Category routing
 app.get("/categories", async (req, res) => {
@@ -51,6 +66,21 @@ app.post("/categories", async (req, res) => {
     data: req.body,
   });
   res.status(201).json(data);
+});
+app.delete("/categories/:id", async (req, res) => {
+  const { id } = req.params;
+  await prisma.category.delete({
+    where: { id },
+  });
+  res.status(200).json({ message: "category deleted" });
+});
+app.patch("/categories/:id", async (req, res) => {
+  const { id } = req.params;
+  const data = await prisma.category.update({
+    where: { id },
+    data: req.body,
+  });
+  res.status(200).json(data);
 });
 
 //! Brands routing
@@ -69,7 +99,21 @@ app.post("/brands", async (req, res) => {
   });
   res.status(201).json(data);
 });
-
+app.delete("/brands/:id", async (req, res) => {
+  const { id } = req.params;
+  await prisma.brand.delete({
+    where: { id },
+  });
+  res.status(200).json({ message: "brand deleted" });
+});
+app.patch("/brands/:id", async (req, res) => {
+  const { id } = req.params;
+  const data = await prisma.brand.update({
+    where: { id },
+    data: req.body,
+  });
+  res.status(200).json(data);
+});
 //listen
 app.listen(PORT, () => {
   console.log(
